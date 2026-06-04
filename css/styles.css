@@ -443,7 +443,7 @@ button { font: inherit; cursor: pointer; }
   padding: var(--sp-2);
   overflow: hidden;
 }
-.step__img img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-md); }
+.step__img img { width: 100%; height: 100%; object-fit: contain; border-radius: var(--r-md); }
 @media (min-width: 640px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
