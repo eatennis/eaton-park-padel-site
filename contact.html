@@ -76,13 +76,12 @@
         </div>
 
         <h2>Map</h2>
-        <!-- TODO: replace src with real Google / OpenStreetMap embed once confirmed -->
         <iframe class="map-frame"
                 title="Map showing Eaton Park, Norwich"
-                src="about:blank"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=1.242238%2C52.611925%2C1.264238%2C52.623925&amp;layer=mapnik&amp;marker=52.617925%2C1.253238"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p class="placeholder-note">Placeholder iframe. Decide map provider (Google Maps embed is free; OpenStreetMap is tracker-free) and drop the embed src in.</p>
+        <p><a href="https://www.openstreetmap.org/?mlat=52.617925&amp;mlon=1.253238#map=16/52.617925/1.253238" target="_blank" rel="noopener">View larger map →</a></p>
 
       </div>
     </section>
@@ -109,25 +108,27 @@
           </div>
           <button class="btn btn--primary" type="submit">Send message</button>
         </form>
-        <p class="placeholder-note">Form handler not yet wired. Decision pending: Cloudflare Worker, Formspree, or Microsoft 365 route. The form will not submit until this is set.</p>
+        <!-- TODO: wire form handler (#TODO-form-handler). Likely a Microsoft Form, since Chris is in M365 (the racket form already is). Until then this form does not submit. -->
 
         <div class="info-grid" style="margin-top: var(--sp-4);">
           <div>
             <h3>Email</h3>
+            <!-- TODO: confirm hello@eatonparkpadel.co.uk is the real inbox before launch -->
             <p><a href="mailto:hello@eatonparkpadel.co.uk">hello@eatonparkpadel.co.uk</a></p>
-            <p class="placeholder-note">Placeholder address — confirm before launch.</p>
           </div>
+          <!-- TODO: add phone number when confirmed
           <div>
             <h3>Phone</h3>
-            <p>[TODO phone number]</p>
+            <p></p>
           </div>
+          -->
           <div>
             <h3>Social</h3>
+            <!-- TODO: replace Norwich Parks Tennis socials with dedicated padel handles once they exist -->
             <p>
               <a href="https://facebook.com/NorwichTennis" target="_blank" rel="noopener">Facebook</a><br />
               <a href="https://instagram.com/norwichparkstennis" target="_blank" rel="noopener">Instagram</a>
             </p>
-            <p class="placeholder-note">Currently pointing at Norwich Parks Tennis socials — replace with dedicated padel handles if/when they're set up.</p>
           </div>
         </div>
       </div>
