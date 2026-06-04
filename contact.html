@@ -51,11 +51,11 @@
           <div>
             <h3>Address</h3>
             <p>Eaton Park<br />South Park Avenue<br />Norwich<br />Norfolk NR4 7AZ</p>
-            <p><a href="https://maps.google.com/maps?daddr=52.617925,1.253238" target="_blank" rel="noopener">Get directions →</a></p>
+            <p><a href="https://maps.google.com/maps?daddr=52.620381,1.258726" target="_blank" rel="noopener">Get directions →</a></p>
           </div>
           <div>
             <h3>Opening hours</h3>
-            <p>Daily 07:00–22:00<br />(Subject to floodlights and weather)</p>
+            <p>Daily 07:00–21:00<br />(Subject to floodlights and weather)</p>
           </div>
           <div>
             <h3>Parking</h3>
@@ -77,11 +77,11 @@
 
         <h2>Map</h2>
         <iframe class="map-frame"
-                title="Map showing Eaton Park, Norwich"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=1.242238%2C52.611925%2C1.264238%2C52.623925&amp;layer=mapnik&amp;marker=52.617925%2C1.253238"
+                title="Map showing Eaton Park Padel, Norwich"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=1.247726%2C52.614381%2C1.269726%2C52.626381&amp;layer=mapnik&amp;marker=52.620381%2C1.258726"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p><a href="https://www.openstreetmap.org/?mlat=52.617925&amp;mlon=1.253238#map=16/52.617925/1.253238" target="_blank" rel="noopener">View larger map →</a></p>
+        <p><a href="https://www.openstreetmap.org/?mlat=52.620381&amp;mlon=1.258726#map=17/52.620381/1.258726" target="_blank" rel="noopener">View larger map →</a></p>
 
       </div>
     </section>
@@ -89,7 +89,12 @@
     <section class="section">
       <div class="container">
         <h2>Send us a message</h2>
-        <form class="form" action="#TODO-form-handler" method="post" novalidate>
+        <form class="form" action="https://formsubmit.co/hello@nationaltennis.org.uk" method="post">
+          <input type="hidden" name="_subject" value="New enquiry — Eaton Park Padel website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- honeypot: bots fill this, humans never see it -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
           <div class="field">
             <label for="name">Your name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
@@ -107,24 +112,24 @@
             <textarea id="message" name="message" required></textarea>
           </div>
           <button class="btn btn--primary" type="submit">Send message</button>
+          <p style="font-size:.85rem;color:var(--c-muted);margin-top:var(--sp-1);">We'll only use your details to reply to your enquiry.</p>
         </form>
-        <!-- TODO: wire form handler (#TODO-form-handler). Likely a Microsoft Form, since Chris is in M365 (the racket form already is). Until then this form does not submit. -->
+        <!-- Contact form posts to FormSubmit (https://formsubmit.co), routing to hello@nationaltennis.org.uk.
+             ACTIVATION: the first submission triggers a one-time confirmation email to that inbox — click the link once to enable.
+             Privacy: submissions pass through formsubmit.co (third party). To keep everything in the M365 tenant, swap to a Microsoft Form instead (like the racket form). -->
 
         <div class="info-grid" style="margin-top: var(--sp-4);">
           <div>
             <h3>Email</h3>
-            <!-- TODO: confirm hello@eatonparkpadel.co.uk is the real inbox before launch -->
-            <p><a href="mailto:hello@eatonparkpadel.co.uk">hello@eatonparkpadel.co.uk</a></p>
+            <p><a href="mailto:hello@nationaltennis.org.uk">hello@nationaltennis.org.uk</a></p>
           </div>
-          <!-- TODO: add phone number when confirmed
           <div>
             <h3>Phone</h3>
-            <p></p>
+            <p><a href="tel:+443305519496">0330 551 9496</a></p>
           </div>
-          -->
           <div>
             <h3>Social</h3>
-            <!-- TODO: replace Norwich Parks Tennis socials with dedicated padel handles once they exist -->
+            <!-- Intentionally points at Norwich Parks Tennis socials for now; swap to dedicated padel handles when they exist -->
             <p>
               <a href="https://facebook.com/NorwichTennis" target="_blank" rel="noopener">Facebook</a><br />
               <a href="https://instagram.com/norwichparkstennis" target="_blank" rel="noopener">Instagram</a>
