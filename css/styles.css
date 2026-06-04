@@ -431,20 +431,15 @@ button { font: inherit; cursor: pointer; }
 .step p { margin: 0; color: var(--c-ink-soft); }
 .step__img {
   width: 100%;
-  background: var(--c-accent-soft);
-  border-radius: var(--r-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--sp-2);
-  overflow: hidden;
 }
 .step__img img {
   width: auto;
   max-width: 100%;
   height: auto;
   max-height: 460px;
-  border-radius: var(--r-md);
   display: block;
 }
 @media (min-width: 640px) {
