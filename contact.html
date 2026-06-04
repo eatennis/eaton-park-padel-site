@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Eaton Park Padel</title>
-  <meta name="description" content="Get in touch with Eaton Park Padel. Block bookings, school groups, partnerships, or anything else." />
+  <title>Contact &amp; find us — Eaton Park Padel</title>
+  <meta name="description" content="Get in touch with Eaton Park Padel in Norwich. Address, opening hours, parking, and a contact form for everything else." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
@@ -21,7 +21,11 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about.html">About</a></li>
-          <li><a href="/find-us.html">Find us</a></li>
+          <li><a href="/what-is-padel.html">What is padel</a></li>
+          <li><a href="/how-to-book.html">How to book</a></li>
+          <li><a href="/coaching.html">Coaching</a></li>
+          <li><a href="/social.html">Social</a></li>
+          <li><a href="/competition.html">Competition</a></li>
           <li><a href="/contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
@@ -29,14 +33,60 @@
   </header>
 
   <main id="main">
+    <section class="hero hero--inner">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Get in touch &amp; find us</h1>
+        <p class="lede">For court bookings head to <a href="#TODO-playtomic" target="_blank" rel="noopener">Playtomic</a>. For everything else — block bookings, school groups, partnerships, press — use the form below.</p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <div class="prose">
-          <h1>Get in touch</h1>
-          <p class="lede">For court bookings, head to <a href="#TODO-playtomic" target="_blank" rel="noopener">Playtomic</a>. For anything else — block bookings, school groups, partnerships, press — use the form below or email us directly.</p>
-          <p class="placeholder-note">Form handler not yet wired. Decision pending: Cloudflare Worker, Formspree, or Microsoft 365 route. The form will not submit until this is set.</p>
+
+        <div class="info-grid" style="margin-bottom: var(--sp-4);">
+          <div>
+            <h3>Address</h3>
+            <p>Eaton Park<br />South Park Avenue<br />Norwich<br />Norfolk NR4 7AZ</p>
+            <p><a href="https://maps.google.com/maps?daddr=52.617925,1.253238" target="_blank" rel="noopener">Get directions →</a></p>
+          </div>
+          <div>
+            <h3>Opening hours</h3>
+            <p>Daily 07:00–22:00<br />(Subject to floodlights and weather)</p>
+          </div>
+          <div>
+            <h3>Parking</h3>
+            <p>Free parking on South Park Avenue. Cycle racks at the pavilion.</p>
+          </div>
+          <div>
+            <h3>By bus</h3>
+            <p>First Norwich service 25 stops on Earlham Road, a 5-minute walk.</p>
+          </div>
+          <div>
+            <h3>By bike</h3>
+            <p>National Cycle Route 1 runs along Earlham Road. Racks on site.</p>
+          </div>
+          <div>
+            <h3>Accessibility</h3>
+            <p>Level access to courts from the park path. Accessible toilet in the pavilion.</p>
+          </div>
         </div>
 
+        <h2>Map</h2>
+        <!-- TODO: replace src with real Google / OpenStreetMap embed once confirmed -->
+        <iframe class="map-frame"
+                title="Map showing Eaton Park, Norwich"
+                src="about:blank"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="placeholder-note">Placeholder iframe. Decide map provider (Google Maps embed is free; OpenStreetMap is tracker-free) and drop the embed src in.</p>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Send us a message</h2>
         <form class="form" action="#TODO-form-handler" method="post" novalidate>
           <div class="field">
             <label for="name">Your name</label>
@@ -56,8 +106,9 @@
           </div>
           <button class="btn btn--primary" type="submit">Send message</button>
         </form>
+        <p class="placeholder-note">Form handler not yet wired. Decision pending: Cloudflare Worker, Formspree, or Microsoft 365 route. The form will not submit until this is set.</p>
 
-        <div class="info-grid" style="margin-top: 2.5rem;">
+        <div class="info-grid" style="margin-top: var(--sp-4);">
           <div>
             <h3>Email</h3>
             <p><a href="mailto:hello@eatonparkpadel.co.uk">hello@eatonparkpadel.co.uk</a></p>
@@ -69,7 +120,11 @@
           </div>
           <div>
             <h3>Social</h3>
-            <p>[TODO Instagram / Facebook links]</p>
+            <p>
+              <a href="https://facebook.com/NorwichTennis" target="_blank" rel="noopener">Facebook</a><br />
+              <a href="https://instagram.com/norwichparkstennis" target="_blank" rel="noopener">Instagram</a>
+            </p>
+            <p class="placeholder-note">Currently pointing at Norwich Parks Tennis socials — replace with dedicated padel handles if/when they're set up.</p>
           </div>
         </div>
       </div>

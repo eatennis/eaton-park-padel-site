@@ -4,13 +4,16 @@
 /* ---------- Tokens (placeholders — overwrite when brand notes land) ---------- */
 :root {
   --c-bg: #ffffff;
-  --c-ink: #14241c;
-  --c-ink-soft: #4a5a52;
-  --c-accent: #1f7a4f;          /* placeholder green */
+  --c-ink: #102018;
+  --c-ink-soft: #455349;
+  --c-accent: #2d6a4f;          /* placeholder tennis-court green — to be replaced from Norwich Parks Tennis brand */
+  --c-accent-dark: #1b4332;
   --c-accent-ink: #ffffff;
-  --c-accent-soft: #e8f3ec;
+  --c-accent-soft: #e7f1ea;
   --c-border: #d9e1dc;
   --c-muted: #6b7a72;
+  --c-ink-bg: #0e1f17;          /* dark section background */
+  --c-highlight: #f7d046;       /* Playtomic banner accent */
 
   --f-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --f-display: var(--f-sans);
@@ -318,6 +321,266 @@ button { font: inherit; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ---------- Stats strip ---------- */
+.stats {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: repeat(2, 1fr);
+  padding-block: var(--sp-3);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+.stats__item { text-align: center; }
+.stats__num {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--c-accent-dark);
+  line-height: 1;
+}
+.stats__label {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+@media (min-width: 640px) {
+  .stats { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Tabs ---------- */
+.tabs { margin-top: var(--sp-3); }
+.tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0 0 var(--sp-3);
+  padding: 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.tabs__list [role="tab"] {
+  border: 0;
+  background: transparent;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  color: var(--c-ink-soft);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+.tabs__list [role="tab"][aria-selected="true"] {
+  color: var(--c-accent-dark);
+  border-bottom-color: var(--c-accent);
+}
+.tabs__list [role="tab"]:hover { color: var(--c-ink); }
+[role="tabpanel"] { display: none; }
+[role="tabpanel"].is-active { display: block; }
+
+/* ---------- Steps (numbered guide) ---------- */
+.steps {
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: 1fr;
+}
+.step {
+  display: grid;
+  gap: var(--sp-2);
+  padding: var(--sp-2);
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+}
+.step__num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+.step h3 { margin: 0; font-size: 1.05rem; }
+.step p { margin: 0; color: var(--c-ink-soft); }
+.step__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--c-accent-soft);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: var(--sp-2);
+  overflow: hidden;
+}
+.step__img img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-md); }
+@media (min-width: 640px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .steps { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Feature image block (gear / rules) ---------- */
+.feature-grid {
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: 1fr;
+}
+.feature {
+  display: grid;
+  gap: var(--sp-1);
+}
+.feature__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--c-accent-soft);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-muted);
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+.feature__img img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-md); }
+.feature h3 { margin: 0; font-size: 1.05rem; }
+.feature p { margin: 0; color: var(--c-ink-soft); }
+@media (min-width: 640px) {
+  .feature-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Playtomic CTA banner ---------- */
+.cta-banner {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: 1fr;
+  background: var(--c-ink-bg);
+  color: #fff;
+  padding: var(--sp-4);
+  border-radius: var(--r-lg);
+  margin-block: var(--sp-4);
+  align-items: center;
+}
+.cta-banner h2 {
+  margin: 0 0 var(--sp-1);
+  color: #fff;
+  font-size: 1.5rem;
+}
+.cta-banner p { margin: 0 0 var(--sp-2); color: #cfdcd5; }
+.cta-banner .btn--primary {
+  background: var(--c-highlight);
+  color: var(--c-ink-bg);
+}
+.cta-banner__img {
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--r-md);
+  aspect-ratio: 5 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f8a7c;
+  font-size: 0.85rem;
+}
+@media (min-width: 900px) {
+  .cta-banner { grid-template-columns: 1.2fr 1fr; }
+}
+
+/* ---------- FAQ (details/summary) ---------- */
+.faqs { display: grid; gap: 0.5rem; max-width: 56rem; margin-inline: auto; }
+.faqs details {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: 0;
+  overflow: hidden;
+}
+.faqs summary {
+  list-style: none;
+  cursor: pointer;
+  padding: var(--sp-2);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.faqs summary::-webkit-details-marker { display: none; }
+.faqs summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--c-accent);
+  line-height: 1;
+}
+.faqs details[open] summary::after { content: "−"; }
+.faqs details > div {
+  padding: 0 var(--sp-2) var(--sp-2);
+  color: var(--c-ink-soft);
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: 1fr;
+}
+.testimonial {
+  padding: var(--sp-3);
+  background: var(--c-accent-dark);
+  color: #fff;
+  border-radius: var(--r-lg);
+}
+.testimonial blockquote {
+  margin: 0 0 var(--sp-2);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.testimonial cite { font-style: normal; font-weight: 600; color: var(--c-highlight); }
+@media (min-width: 700px) {
+  .testimonials { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .testimonials { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Hero variants ---------- */
+.hero--inner {
+  padding-block: var(--sp-4) var(--sp-3);
+  border-bottom: 1px solid var(--c-border);
+}
+.hero--inner h1 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
+.hero--inner .eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: var(--sp-1);
+}
+
+/* ---------- Pill row (sub-nav within page) ---------- */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: var(--sp-2);
+}
+.pill {
+  padding: 0.4rem 0.85rem;
+  background: var(--c-accent-soft);
+  color: var(--c-accent-dark);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.pill:hover { background: var(--c-accent); color: #fff; }
 
 /* ---------- Visually hidden (a11y) ---------- */
 .sr-only {
