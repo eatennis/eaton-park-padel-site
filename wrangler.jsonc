@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static-assets config for the Eaton Park Padel site.
+  // Plain HTML/CSS/JS — no build step. Serves the repo root as static assets.
+  "name": "eaton-park-padel-site",
+  "compatibility_date": "2024-11-01",
+  "assets": {
+    "directory": "."
+  }
+}
