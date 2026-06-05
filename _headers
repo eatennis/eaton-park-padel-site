@@ -4,10 +4,12 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
-# Long-cache fingerprint-free static assets (safe: low churn, brochure site)
-/images/*
-  Cache-Control: public, max-age=86400
+# CSS/JS aren't fingerprinted and change during the build — revalidate each
+# load (ETag → 304 when unchanged) so updates appear immediately, not after a day.
 /css/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, no-cache
 /js/*
+  Cache-Control: public, no-cache
+# Images rarely change; cache a day. Rename the file to bust it if you swap one.
+/images/*
   Cache-Control: public, max-age=86400
