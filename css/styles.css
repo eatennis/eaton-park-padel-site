@@ -184,6 +184,89 @@ button { font: inherit; cursor: pointer; }
   gap: var(--sp-1);
 }
 
+/* ---------- Hero: home (graphic / brand-led) ---------- */
+.hero--home {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: var(--sp-6) var(--sp-5);
+  color: #fff;
+  background:
+    radial-gradient(900px 520px at 88% -25%, rgba(110,70,141,0.55), transparent 60%),
+    linear-gradient(135deg, var(--c-accent-dark) 0%, #045a47 48%, var(--c-highlight-dark) 135%);
+}
+.hero--home .hero__inner { position: relative; z-index: 1; }
+.hero--home h1 {
+  color: #fff;
+  font-size: clamp(2.2rem, 6.5vw, 3.6rem);
+}
+.hero--home p.lede { color: rgba(255,255,255,0.85); }
+.hero__eyebrow {
+  display: inline-block;
+  margin: 0 0 var(--sp-2);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ddccef;
+}
+.hero--home .btn--primary { background: #fff; color: var(--c-accent-dark); }
+.hero--home .btn--primary:hover { background: #eef2f0; }
+.hero--home .btn--ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
+.hero--home .btn--ghost:hover { background: rgba(255,255,255,0.12); }
+
+/* Court-line motif */
+.hero__bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero__court {
+  position: absolute;
+  right: -36px; top: 50%;
+  width: 300px; height: auto;
+  transform: translateY(-50%) rotate(9deg);
+  color: #fff; opacity: 0.10;
+}
+.hero__court rect, .hero__court line {
+  stroke: currentColor; stroke-width: 2.5; fill: none;
+}
+@media (max-width: 720px) {
+  .hero__court { right: -90px; width: 230px; opacity: 0.07; }
+}
+
+/* Stats woven into the hero */
+.hero__stats {
+  list-style: none;
+  margin: var(--sp-4) 0 0;
+  padding: var(--sp-3) 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-2);
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.hero__stats li { text-align: left; }
+.hero__stat-num {
+  display: block;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+}
+.hero__stat-label {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+@media (min-width: 640px) {
+  .hero__stats { grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); }
+}
+
+/* ---------- Section heads & rhythm ---------- */
+.section--soft { background: var(--c-accent-soft); }
+.section__head { max-width: var(--w-readable); margin-bottom: var(--sp-3); }
+.section__title { margin: 0; font-size: clamp(1.5rem, 3.2vw, 2rem); letter-spacing: -0.01em; }
+.section__sub { margin: var(--sp-1) 0 0; color: var(--c-ink-soft); font-size: 1.05rem; }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
@@ -507,15 +590,62 @@ button { font: inherit; cursor: pointer; }
   background: var(--c-highlight);
   color: var(--c-ink-bg);
 }
-.cta-banner__img {
-  background: rgba(255,255,255,0.06);
-  border-radius: var(--r-md);
-  aspect-ratio: 5 / 3;
+.cta-banner__visual { display: flex; justify-content: center; }
+.app-mock {
+  width: 100%;
+  max-width: 320px;
+  background: #fff;
+  color: var(--c-ink);
+  border-radius: var(--r-lg);
+  padding: var(--sp-2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.30);
+}
+.app-mock__head {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #6f8a7c;
-  font-size: 0.85rem;
+  gap: 0.5rem;
+  padding: 0.25rem 0.25rem var(--sp-1);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.app-mock__head::before {
+  content: "";
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--c-accent);
+}
+.app-mock__slot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  font-size: 0.9rem;
+}
+.app-mock__time { font-weight: 600; }
+.app-mock__court { color: var(--c-muted); font-size: 0.82rem; }
+.app-mock__tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  background: var(--c-accent-soft);
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+.app-mock__book {
+  margin-top: 0.6rem;
+  text-align: center;
+  background: var(--c-highlight);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.65rem;
+  border-radius: var(--r-md);
+  font-size: 0.9rem;
 }
 @media (min-width: 900px) {
   .cta-banner { grid-template-columns: 1.2fr 1fr; }

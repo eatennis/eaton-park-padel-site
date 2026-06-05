@@ -50,32 +50,40 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="container">
-        <h1>Padel at Eaton Park. <br />Right next door to the tennis.</h1>
+    <section class="hero hero--home">
+      <div class="hero__bg" aria-hidden="true">
+        <svg class="hero__court" viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="188" height="308" rx="8" />
+          <line x1="6" y1="160" x2="194" y2="160" />
+          <line x1="6" y1="92" x2="194" y2="92" />
+          <line x1="6" y1="228" x2="194" y2="228" />
+          <line x1="100" y1="92" x2="100" y2="228" />
+        </svg>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Norwich Parks Padel · Eaton Park</p>
+        <h1>Padel at Eaton Park.<br />Right next door to the tennis.</h1>
         <p class="lede">Four panoramic glass courts in one of Norwich's best-loved parks. First-timers welcome, league players welcome — book on Playtomic and come down.</p>
         <div class="hero__cta">
           <!-- TODO: replace with real Playtomic venue URL -->
           <a class="btn btn--primary" href="#TODO-playtomic" target="_blank" rel="noopener">Book a court</a>
           <a class="btn btn--ghost" href="/what-is-padel.html">New to padel?</a>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--tight">
-      <div class="container">
-        <ul class="stats" aria-label="At a glance">
-          <li class="stats__item"><span class="stats__num">4</span><span class="stats__label">Courts</span></li>
-          <li class="stats__item"><span class="stats__num">07:00–21:00</span><span class="stats__label">Daily</span></li>
-          <li class="stats__item"><span class="stats__num">All year</span><span class="stats__label">Floodlit</span></li>
-          <li class="stats__item"><span class="stats__num">NR4 7AZ</span><span class="stats__label">Norwich</span></li>
+        <ul class="hero__stats" aria-label="At a glance">
+          <li><span class="hero__stat-num">4</span><span class="hero__stat-label">Courts</span></li>
+          <li><span class="hero__stat-num">07:00–21:00</span><span class="hero__stat-label">Daily</span></li>
+          <li><span class="hero__stat-num">All year</span><span class="hero__stat-label">Floodlit</span></li>
+          <li><span class="hero__stat-num">NR4 7AZ</span><span class="hero__stat-label">Norwich</span></li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="sr-only">Experience Eaton Park Padel</h2>
+        <div class="section__head">
+          <h2 class="section__title">Three ways to play</h2>
+          <p class="section__sub">Book a court, sharpen up with a coach, or test yourself in a league — all in one place.</p>
+        </div>
         <div class="cards">
 
           <!-- TODO: replace with real Playtomic venue URL -->
@@ -104,7 +112,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--soft">
       <div class="container prose">
         <h2>The fastest-growing sport in the world</h2>
         <p>Padel is a fast-paced racket sport that blends the best of tennis and squash. Played on a smaller court with glass walls, it's easy to pick up in your first session and addictive by your second. Doubles by default, so you turn up with three mates or join a public game and meet new ones.</p>
@@ -121,7 +129,15 @@
             <!-- TODO: replace with real Playtomic venue URL -->
             <a class="btn btn--primary" href="#TODO-playtomic" target="_blank" rel="noopener">Open Playtomic</a>
           </div>
-          <div class="cta-banner__img" aria-hidden="true">[Playtomic app screenshot]</div>
+          <div class="cta-banner__visual" aria-hidden="true">
+            <div class="app-mock">
+              <div class="app-mock__head">Eaton Park Padel</div>
+              <div class="app-mock__slot"><span class="app-mock__time">Today 18:00</span><span class="app-mock__court">Court 2</span><span class="app-mock__tag">Open</span></div>
+              <div class="app-mock__slot"><span class="app-mock__time">Today 19:30</span><span class="app-mock__court">Court 4</span><span class="app-mock__tag">Open</span></div>
+              <div class="app-mock__slot"><span class="app-mock__time">Tomorrow 07:00</span><span class="app-mock__court">Court 1</span><span class="app-mock__tag">Open</span></div>
+              <div class="app-mock__book">Book a court</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
