@@ -566,6 +566,49 @@ button { font: inherit; cursor: pointer; }
   .steps { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* ---------- Join code + app links (box leagues) ---------- */
+.section__sub + .steps,
+.section__sub + .cards { margin-top: var(--sp-4); }
+.steps + .prose { margin-top: var(--sp-4); }
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.joincode {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-2);
+  padding: var(--sp-2);
+  background: var(--c-highlight-soft);
+  border: 1px solid var(--c-highlight);
+  border-radius: var(--r-md);
+}
+.joincode__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-highlight-dark);
+}
+.joincode__value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--c-ink);
+}
+.keypoints {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--sp-1);
+}
+.keypoints li { color: var(--c-ink-soft); }
+.keypoints strong { color: var(--c-ink); font-weight: 700; }
+
 /* ---------- Feature image block (gear / rules) ---------- */
 .feature-grid {
   display: grid;
