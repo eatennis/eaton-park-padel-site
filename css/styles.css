@@ -314,19 +314,19 @@ button { font: inherit; cursor: pointer; }
   .hero--inner { min-height: 300px; }
 }
 .hero--inner h1 { color: #fff; }
-.hero--inner .lede { color: #fff; max-width: 36ch; }
+.hero--inner p.lede { color: #fff; max-width: 36ch; }
 .hero--inner .eyebrow { color: #ddccef; }
 
 /* Legibility insurance for hero text over bright patches of photo */
 .hero--home h1, .hero--home p.lede,
-.hero--inner h1, .hero--inner .lede {
+.hero--inner h1, .hero--inner p.lede {
   text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 2px 16px rgba(0,0,0,0.40);
 }
 
 /* On narrow screens text spans the full width, so the left-anchored
    scrim isn't enough — use a more even veil for legibility. */
 @media (max-width: 640px) {
-  .hero--inner .lede { max-width: none; }
+  .hero--inner p.lede { max-width: none; }
   .hero--home::after,
   .hero--inner::after {
     background:
