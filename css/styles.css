@@ -217,22 +217,6 @@ button { font: inherit; cursor: pointer; }
 .hero--home .btn--ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
 .hero--home .btn--ghost:hover { background: rgba(255,255,255,0.12); }
 
-/* Court-line motif */
-.hero__bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.hero__court {
-  position: absolute;
-  right: -36px; top: 50%;
-  width: 300px; height: auto;
-  transform: translateY(-50%) rotate(9deg);
-  color: #fff; opacity: 0.10;
-}
-.hero__court rect, .hero__court line {
-  stroke: currentColor; stroke-width: 2.5; fill: none;
-}
-@media (max-width: 720px) {
-  .hero__court { right: -90px; width: 230px; opacity: 0.07; }
-}
-
 /* Stats woven into the hero */
 .hero__stats {
   list-style: none;
