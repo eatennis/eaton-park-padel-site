@@ -284,8 +284,8 @@ button { font: inherit; cursor: pointer; }
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(1,31,24,0.78) 0%, rgba(1,31,24,0.42) 42%, rgba(1,31,24,0.05) 72%, transparent 100%),
-    linear-gradient(0deg, rgba(1,31,24,0.62) 0%, rgba(1,31,24,0.12) 38%, transparent 60%);
+    linear-gradient(90deg, rgba(1,28,22,0.82) 0%, rgba(1,28,22,0.52) 46%, rgba(1,28,22,0.28) 78%, rgba(1,28,22,0.18) 100%),
+    linear-gradient(0deg, rgba(1,28,22,0.48) 0%, rgba(1,28,22,0.10) 52%, transparent 100%);
 }
 
 /* Inner heroes: a proper photo band. Scrim only on the left, behind
@@ -307,15 +307,32 @@ button { font: inherit; cursor: pointer; }
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(1,31,24,0.80) 0%, rgba(1,31,24,0.45) 45%, rgba(1,31,24,0.08) 75%, transparent 100%),
-    linear-gradient(0deg, rgba(1,31,24,0.40) 0%, transparent 55%);
+    linear-gradient(90deg, rgba(1,28,22,0.90) 0%, rgba(1,28,22,0.70) 40%, rgba(1,28,22,0.40) 72%, rgba(1,28,22,0.20) 100%),
+    linear-gradient(0deg, rgba(1,28,22,0.42) 0%, rgba(1,28,22,0.08) 55%, transparent 100%);
 }
 @media (min-width: 720px) {
   .hero--inner { min-height: 300px; }
 }
 .hero--inner h1 { color: #fff; }
-.hero--inner .lede { color: rgba(255,255,255,0.9); }
+.hero--inner .lede { color: #fff; max-width: 36ch; }
 .hero--inner .eyebrow { color: #ddccef; }
+
+/* Legibility insurance for hero text over bright patches of photo */
+.hero--home h1, .hero--home p.lede,
+.hero--inner h1, .hero--inner .lede {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 2px 16px rgba(0,0,0,0.40);
+}
+
+/* On narrow screens text spans the full width, so the left-anchored
+   scrim isn't enough — use a more even veil for legibility. */
+@media (max-width: 640px) {
+  .hero--inner .lede { max-width: none; }
+  .hero--home::after,
+  .hero--inner::after {
+    background:
+      linear-gradient(180deg, rgba(1,28,22,0.50) 0%, rgba(1,28,22,0.58) 55%, rgba(1,28,22,0.68) 100%);
+  }
+}
 .hero--inner .btn--ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
 .hero--inner .btn--ghost:hover { background: rgba(255,255,255,0.12); }
 
