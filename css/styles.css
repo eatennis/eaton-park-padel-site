@@ -172,6 +172,7 @@ button { font: inherit; cursor: pointer; }
   line-height: 1.08;
   margin: 0 0 var(--sp-2);
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
 }
 .hero p.lede {
   font-size: 1.125rem;
@@ -199,7 +200,7 @@ button { font: inherit; cursor: pointer; }
 .hero--home .hero__inner { position: relative; z-index: 1; }
 .hero--home h1 {
   color: #fff;
-  font-size: clamp(2.2rem, 6.5vw, 3.6rem);
+  font-size: clamp(1.9rem, 5.6vw, 3.6rem);
 }
 .hero--home p.lede { color: rgba(255,255,255,0.85); }
 .hero__eyebrow {
@@ -275,24 +276,29 @@ button { font: inherit; cursor: pointer; }
   object-fit: cover;
 }
 
-/* Home: photo under the existing brand gradient */
+/* Home: directional scrim — dark where the text sits (bottom-left),
+   letting the photo show through the rest. */
 .hero--home::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(900px 520px at 88% -25%, rgba(110,70,141,0.45), transparent 60%),
-    linear-gradient(135deg, rgba(2,59,47,0.90) 0%, rgba(4,90,71,0.74) 48%, rgba(77,48,99,0.82) 135%);
+    linear-gradient(90deg, rgba(1,31,24,0.78) 0%, rgba(1,31,24,0.42) 42%, rgba(1,31,24,0.05) 72%, transparent 100%),
+    linear-gradient(0deg, rgba(1,31,24,0.62) 0%, rgba(1,31,24,0.12) 38%, transparent 60%);
 }
 
-/* Inner heroes: photo band with a green wash and white text */
+/* Inner heroes: a proper photo band. Scrim only on the left, behind
+   the heading, so the photo reads on the right. */
 .hero--inner {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   color: #fff;
   background: var(--c-accent-dark);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
 }
 .hero--inner > .container { position: relative; z-index: 1; }
 .hero--inner::after {
@@ -300,7 +306,12 @@ button { font: inherit; cursor: pointer; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(120deg, rgba(2,59,47,0.86) 0%, rgba(4,90,71,0.58) 60%, rgba(77,48,99,0.74) 100%);
+  background:
+    linear-gradient(90deg, rgba(1,31,24,0.80) 0%, rgba(1,31,24,0.45) 45%, rgba(1,31,24,0.08) 75%, transparent 100%),
+    linear-gradient(0deg, rgba(1,31,24,0.40) 0%, transparent 55%);
+}
+@media (min-width: 720px) {
+  .hero--inner { min-height: 300px; }
 }
 .hero--inner h1 { color: #fff; }
 .hero--inner .lede { color: rgba(255,255,255,0.9); }
