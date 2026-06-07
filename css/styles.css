@@ -570,6 +570,12 @@ button { font: inherit; cursor: pointer; }
 .section__sub + .steps,
 .section__sub + .cards { margin-top: var(--sp-4); }
 .steps + .prose { margin-top: var(--sp-4); }
+.app-logo {
+  display: block;
+  width: 200px;
+  max-width: 70%;
+  height: auto;
+}
 .app-links {
   display: flex;
   flex-wrap: wrap;
