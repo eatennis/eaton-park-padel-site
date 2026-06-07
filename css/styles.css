@@ -262,6 +262,75 @@ button { font: inherit; cursor: pointer; }
   .hero__stats { grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); }
 }
 
+/* ---------- Hero photos (home + inner) ---------- */
+/* A photo dropped into /images/hero/<page>.jpg sits behind a brand-colour
+   wash so the white hero text stays legible. If the file is missing the
+   <img> removes itself (onerror) and the gradient/dark fallback shows. */
+.hero__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Home: photo under the existing brand gradient */
+.hero--home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(900px 520px at 88% -25%, rgba(110,70,141,0.45), transparent 60%),
+    linear-gradient(135deg, rgba(2,59,47,0.90) 0%, rgba(4,90,71,0.74) 48%, rgba(77,48,99,0.82) 135%);
+}
+
+/* Inner heroes: photo band with a green wash and white text */
+.hero--inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fff;
+  background: var(--c-accent-dark);
+}
+.hero--inner > .container { position: relative; z-index: 1; }
+.hero--inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, rgba(2,59,47,0.86) 0%, rgba(4,90,71,0.58) 60%, rgba(77,48,99,0.74) 100%);
+}
+.hero--inner h1 { color: #fff; }
+.hero--inner .lede { color: rgba(255,255,255,0.9); }
+.hero--inner .eyebrow { color: #ddccef; }
+.hero--inner .btn--ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
+.hero--inner .btn--ghost:hover { background: rgba(255,255,255,0.12); }
+
+/* ---------- CTA banner photo ---------- */
+.cta-banner__img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.85rem;
+}
+.cta-banner__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* ---------- Section heads & rhythm ---------- */
 .section--soft { background: var(--c-accent-soft); }
 .section__head { max-width: var(--w-readable); margin-bottom: var(--sp-3); }
