@@ -891,7 +891,7 @@ button { font: inherit; cursor: pointer; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-accent);
+  color: #ddccef; /* light purple — mirrors the home hero eyebrow across all inner pages */
   margin-bottom: var(--sp-1);
 }
 
