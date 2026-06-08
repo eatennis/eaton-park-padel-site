@@ -298,6 +298,8 @@ button { font: inherit; cursor: pointer; }
 }
 .hero--inner h1 { color: #fff; }
 .hero--inner p.lede { color: #fff; max-width: 36ch; }
+.hero--inner p.lede a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.hero--inner p.lede a:hover { color: #ddccef; }
 .hero--inner .eyebrow { color: #ddccef; }
 
 /* Legibility insurance for hero text over bright patches of photo */
