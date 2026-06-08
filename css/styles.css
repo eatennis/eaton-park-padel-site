@@ -758,7 +758,8 @@ button { font: inherit; cursor: pointer; }
 .cta-banner p { margin: 0 0 var(--sp-2); color: #cfdcd5; }
 .cta-banner .btn--primary {
   background: var(--c-highlight);
-  color: var(--c-ink-bg);
+  color: #fff;
+  font-weight: 700;
 }
 .cta-banner__visual { display: flex; justify-content: center; }
 .app-mock {
