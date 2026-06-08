@@ -662,6 +662,15 @@ button { font: inherit; cursor: pointer; }
   flex-wrap: wrap;
   gap: var(--sp-2);
 }
+.booking { display: flex; flex-direction: column; gap: var(--sp-2); align-items: flex-start; }
+.booking__alt { margin: 0; font-size: 0.92rem; color: var(--c-muted); }
+.booking__alt a { color: var(--c-accent-dark); font-weight: 600; }
+/* On the dark green CTA banner the store buttons stay white; lighten the web-fallback note */
+.cta-banner .booking__alt { color: #cfdcd5; }
+.cta-banner .booking__alt a { color: #fff; }
+/* On dark hero photos */
+.hero--inner .booking__alt { color: rgba(255,255,255,0.9); }
+.hero--inner .booking__alt a { color: #fff; }
 .joincode {
   display: flex;
   flex-wrap: wrap;
