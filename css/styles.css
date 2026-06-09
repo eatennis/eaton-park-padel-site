@@ -367,6 +367,34 @@ button { font: inherit; cursor: pointer; }
 .btn--ghost { background: transparent; color: var(--c-ink); border-color: var(--c-border); }
 .btn--ghost:hover { background: var(--c-accent-soft); }
 
+/* ---------- Racket request callout (free racket + balls) ---------- */
+.racket-cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3);
+  background: var(--c-highlight-soft);
+  border: 1px solid #ddc9ec;
+  border-left: 4px solid var(--c-highlight);
+  border-radius: var(--r-lg);
+}
+.racket-cta__icon { font-size: 2rem; line-height: 1; }
+.racket-cta__body { flex: 1; }
+.racket-cta h2,
+.racket-cta h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+  color: var(--c-highlight-dark);
+}
+.racket-cta p { margin: 0; color: var(--c-ink-soft); }
+.btn--racket { background: var(--c-highlight); color: #fff; white-space: nowrap; }
+.btn--racket:hover { transform: translateY(-1px); background: var(--c-highlight-dark); }
+
+@media (min-width: 640px) {
+  .racket-cta { flex-direction: row; align-items: center; gap: var(--sp-3); }
+  .racket-cta .btn--racket { margin-left: auto; }
+}
+
 /* ---------- Outbound cards (the four destinations) ---------- */
 .cards {
   display: grid;
