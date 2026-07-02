@@ -437,6 +437,48 @@ button { font: inherit; cursor: pointer; }
   font-weight: 600;
   color: var(--c-accent);
 }
+/* Button-footed card (e.g. WhatsApp join) — button sits at the base like the arrow */
+.card > .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- Players' WhatsApp block ---------- */
+.whatsapp-block {
+  display: grid;
+  gap: var(--sp-3);
+  align-items: center;
+  padding: var(--sp-4);
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+.whatsapp-block__body { max-width: var(--w-readable); }
+.whatsapp-block__body h2 { margin-top: var(--sp-1); }
+.whatsapp-block__body ul { margin: var(--sp-2) 0; padding-left: 1.2em; color: var(--c-ink-soft); }
+.whatsapp-block__body li { margin-bottom: 0.4rem; }
+.whatsapp-block__body .btn { margin-top: var(--sp-2); }
+.whatsapp-block__qr {
+  justify-self: center;
+  text-align: center;
+}
+.whatsapp-block__qr img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+.whatsapp-block__scan {
+  margin: var(--sp-1) 0 0;
+  font-size: 0.85rem;
+  color: var(--c-ink-soft);
+}
+@media (min-width: 640px) {
+  .whatsapp-block {
+    grid-template-columns: 1fr auto;
+    gap: var(--sp-4);
+  }
+}
 
 /* ---------- Generic prose ---------- */
 .prose { max-width: var(--w-readable); }
