@@ -395,6 +395,40 @@ button { font: inherit; cursor: pointer; }
   .racket-cta .btn--racket { margin-left: auto; }
 }
 
+/* ---------- Signpost strip (green variant of racket-cta) ---------- */
+.signpost {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3);
+  background: var(--c-accent-soft);
+  border: 1px solid #c3ddd4;
+  border-left: 4px solid var(--c-accent);
+  border-radius: var(--r-lg);
+}
+.signpost__icon { font-size: 2rem; line-height: 1; }
+.signpost__body { flex: 1; }
+.signpost h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+  color: var(--c-accent-dark);
+}
+.signpost p { margin: 0; color: var(--c-ink-soft); }
+.signpost__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+.signpost__link { font-weight: 600; white-space: nowrap; }
+@media (min-width: 640px) {
+  .signpost { flex-direction: row; align-items: center; gap: var(--sp-3); }
+  .signpost__actions {
+    margin-left: auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 /* ---------- Outbound cards (the four destinations) ---------- */
 .cards {
   display: grid;
