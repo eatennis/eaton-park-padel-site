@@ -750,7 +750,19 @@ button { font: inherit; cursor: pointer; }
 }
 @media (min-width: 900px) {
   .steps { grid-template-columns: repeat(3, 1fr); }
+  .steps--four { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* Racket-hire locker photo */
+.hire-photo {
+  margin: 0 auto var(--sp-4);
+  max-width: 760px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+}
+.hire-photo img { display: block; width: 100%; height: auto; }
+.steps + .racket-cta { margin-top: var(--sp-4); }
 
 /* ---------- Join code + app links (box leagues) ---------- */
 .section__sub + .steps,
