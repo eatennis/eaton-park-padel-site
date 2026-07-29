@@ -1038,3 +1038,68 @@ button { font: inherit; cursor: pointer; }
   overflow: hidden; clip: rect(0,0,0,0);
   white-space: nowrap; border: 0;
 }
+
+/* ---------- Launch open-day bar (TEMPORARY — remove after 10/08/2026) ----------
+   Injected site-wide by js/main.js. Delete this block + the JS block together
+   once the open day has passed. Purple = brand accent, so it reads as special
+   against the green site. */
+.launch-bar {
+  background: var(--c-highlight);
+  color: #fff;
+  border-bottom: 2px solid var(--c-highlight-dark);
+}
+.launch-bar__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-1);
+  padding-block: 0.55rem;
+}
+.launch-bar__text {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.launch-bar__tag {
+  flex: none;
+  background: #fff;
+  color: var(--c-highlight-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+}
+.launch-bar__detail strong { font-weight: 700; }
+.launch-bar__cta {
+  flex: none;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.38rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: default;
+}
+/* When the booking URL is set the pill becomes a real link — keep it white on
+   purple (base links are brand green) and give it a hover. */
+a.launch-bar__cta { cursor: pointer; }
+a.launch-bar__cta:hover { background: rgba(255, 255, 255, 0.3); text-decoration: none; }
+
+@media (min-width: 720px) {
+  .launch-bar__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-2);
+  }
+  .launch-bar__text { font-size: 0.95rem; }
+}
