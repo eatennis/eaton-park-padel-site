@@ -69,7 +69,7 @@
   // below. The pill turns into a clickable "Book your slot" link automatically;
   // no other change needed.
   (function () {
-    var LAUNCH_BOOKING_URL = '';                          // '' = show non-clickable "Bookings open soon"
+    var LAUNCH_BOOKING_URL = 'https://bookwhen.com/nta-norfolk/e/ev-soiom-20260810080000';  // '' = show non-clickable "Bookings open soon"
     var LAUNCH_EXPIRES = new Date(2026, 7, 11, 0, 0, 0);  // 00:00 on 11/08/2026 (day after the event)
     if (new Date() >= LAUNCH_EXPIRES) return;
 
