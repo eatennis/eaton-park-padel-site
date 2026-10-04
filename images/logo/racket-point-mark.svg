@@ -1,0 +1,6 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" role="img" aria-label="Racket Point">
+  <desc>Racket Point · v4.2 · 29 July 2026 · Extracted mark (the octagonal O with centred dot). True vector paths, no font dependency. Construction: 64-unit box, octagon inscribed at radius 26, stroke 6, round joins, centre dot r 8.5; favicon cut uses stroke 9 and dot r 11, 16px use only. Verified against the v4.2 correction: the standalone mark is centred in its own box by construction and is independent of wordmark baseline alignment — geometry unchanged.</desc>
+  <path d="M56 42 L42 56 L22 56 L8 42 L8 22 L22 8 L42 8 L56 22 Z" fill="none" stroke="#1A3D2F" stroke-width="6" stroke-linejoin="round"></path>
+  <circle cx="32" cy="32" r="8.5" fill="#1A3D2F"></circle>
+</svg>
